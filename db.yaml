@@ -11,9 +11,9 @@
 
   - name: start and enable mysqld
     ansible.builltin.service:
-    name: mysqld
-    state: started
-    enable: yes
+      name: mysqld
+      state: started
+      enable: yes
   # check mysql root password already created or not
   - name: check DB connection
     community.mysql.mysql_info:

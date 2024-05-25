@@ -10,10 +10,11 @@
       state: latest
 
   - name: start and enable mysqld
-    ansible.builltin.service:
+    ansible.builtin.service:
       name: mysqld
       state: started
       enable: yes
+
   # check mysql root password already created or not
   - name: check DB connection
     community.mysql.mysql_info:

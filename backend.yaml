@@ -14,8 +14,11 @@
 
   - name: install nodejs
     ansible.builtin.dnf:
-      name: nodejs
+      name: "{{item}}"
       state: installed
+    loop:
+    - nodejs
+    - mysql
 
   - name: create expense user
     ansible.builtin.user:
@@ -57,6 +60,7 @@
       target: /app/schema/backend.sql
       state: import
       name: all
+  - name: 
 
     
 

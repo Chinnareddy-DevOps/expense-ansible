@@ -14,7 +14,7 @@
 
   - name: install nodejs
     ansible.builtin.dnf:
-      name: "{{item}}"
+      name: "{{ item }}"
       state: installed
     loop:
     - nodejs
@@ -60,7 +60,7 @@
       target: /app/schema/backend.sql
       state: import
       name: all
-  - name: 
+
 
     
 
